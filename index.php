@@ -7,6 +7,7 @@ This is our amazing custom theme
     <title>My PHP Page</title>
     <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
 </head>
+
 <body>
     <?php
         $myName = array('Brad', 'John', 'Hayato', 'Sakura', 'Haha');
