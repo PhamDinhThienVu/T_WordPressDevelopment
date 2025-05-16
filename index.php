@@ -1,5 +1,3 @@
-
-This is our amazing custom theme
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,22 +7,14 @@ This is our amazing custom theme
 </head>
 
 <body>
+    <!-- Let's add some post from admin site first -->
     <?php
-        $myName = array('Brad', 'John', 'Hayato', 'Sakura', 'Haha');
-
-        
+        while(have_posts()){
+            the_post(); ?>
+                <h1> <a href="<?php the_permalink(); ?>"> <?php the_title(); ?></a>   </h1>
+                <p> <?php the_content(); ?> </p>
+            <?php
+        }
     ?>
-
-    <!-- Using $myname arrays to display the list -->
-    <ul>
-        <?php 
-            $count = 0;
-            while($count < count($myName)){
-                echo "<li>$myName[$count]</li>";
-                $count++;
-            }
-        ?>
-    </ul>
-    
 </body>
 </html>
